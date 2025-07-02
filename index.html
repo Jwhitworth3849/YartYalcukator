@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yart Yalculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="main_container">
+            <input id="d9thc_input" type="text" placeholder="Enter d9THC in grams" oninput="go()">
+            <p>Total Volume:</p>
+            <p id="tv_output"></p>
+            <p>Total CBN to add in ml:</p>
+            <p id="cbn_output"></p>
+            <p>Total THCP to add in ml:</p>
+            <p id="thcp_output"></p>
+            <p>Total Terpenes to add in ml:</p>
+            <p id="terp_output"></p>
+            <script>
+                function go() {
+                    let d = parseFloat(document.getElementById("d9thc_input").value);
+                    let tv = d / 0.75;
+                    let cbn = tv * 0.15;
+                    let thcp = tv * 0.05;
+                    let terp = tv * 0.05;
+                    document.getElementById("cbn_output").innerText = cbn.toFixed(2) + "ml";
+                    document.getElementById("thcp_output").innerText = thcp.toFixed(2) + "ml";
+                    document.getElementById("terp_output").innerText = terp.toFixed(2) + "ml";
+                    document.getElementById("tv_output").innerText = tv.toFixed(2) + "ml";
+                };
+            </script>
+        </div>
+    </body>
+</html>
