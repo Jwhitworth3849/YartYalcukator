@@ -12,19 +12,15 @@
             <p id="tv_output"></p>
             <p>Total CBG to add in ml:</p>
             <p id="cbg_output"></p>
-            <p>Total THCP to add in ml:</p>
-            <p id="thcp_output"></p>
             <p>Total Terpenes to add in ml:</p>
             <p id="terp_output"></p>
             <script>
                 function go() {
                     let d = parseFloat(document.getElementById("d9thc_input").value);
-                    let tv = d / 0.70;
+                    let tv = d / 0.80;
                     let cbg = tv * 0.15;
-                    let thcp = tv * 0.1;
                     let terp = tv * 0.05;
                     document.getElementById("cbg_output").innerText = cbg.toFixed(2) + "ml";
-                    document.getElementById("thcp_output").innerText = thcp.toFixed(2) + "ml";
                     document.getElementById("terp_output").innerText = terp.toFixed(2) + "ml";
                     document.getElementById("tv_output").innerText = tv.toFixed(2) + "ml";
                 };
